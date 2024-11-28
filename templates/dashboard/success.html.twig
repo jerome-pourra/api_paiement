@@ -1,0 +1,55 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Paiement réussi{% endblock %}
+
+{% block body %}
+<div class="min-h-screen flex bg-gray-100">
+
+    <!-- Barre de navigation verticale -->
+    <div class="w-64 bg-gray-800 text-white p-6">
+        <h2 class="text-2xl font-semibold mb-6">Dashboard</h2>
+        
+        <!-- Boutons de navigation -->
+        <ul>
+            <li class="mb-4">
+                <a href="{{ path('app_logout') }}" class="block px-4 py-2 rounded-lg bg-red-600 hover:bg-red-700 transition duration-300">
+                    Déconnexion
+                </a>
+            </li>
+            <li class="mb-4">
+                <button class="block w-full px-4 py-2 rounded-lg bg-gray-600 text-gray-400 cursor-not-allowed" disabled>
+                    Module 1 (Désactivé)
+                </button>
+            </li>
+            <li>
+                <button class="block w-full px-4 py-2 rounded-lg bg-gray-600 text-gray-400 cursor-not-allowed" disabled>
+                    Module 2 (Désactivé)
+                </button>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Contenu principal -->
+    <div class="flex-1 py-6 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+
+            <!-- Titre principal -->
+            <h1 class="text-4xl font-semibold text-gray-900 mb-6">Paiement réussi</h1>
+
+            <!-- Message de succès -->
+            <div class="bg-green-100 p-6 rounded-lg shadow-lg">
+                <h2 class="text-2xl font-semibold text-green-700 mb-4">Félicitations !</h2>
+                <p class="text-lg text-gray-700">Votre paiement a été effectué avec succès. Merci pour votre achat !</p>
+                <p class="mt-2 text-lg text-gray-700">Vous recevrez bientôt un email de confirmation. Si vous avez des questions, contactez-nous à <strong>support@example.com</strong>.</p>
+                
+                <!-- Bouton pour revenir au dashboard -->
+                <a href="{{ path('app_dashboard') }}" class="mt-6 inline-block px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition duration-300">
+                    Retour au Dashboard
+                </a>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+{% endblock %}
