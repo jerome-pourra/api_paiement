@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Bienvenue sur le super site toto !{% endblock %}
+
+{% block body %}
+<div class="min-h-screen bg-gray-100 flex items-center justify-center">
+    <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
+        <h1 class="text-3xl font-semibold text-center text-gray-900 mb-6">
+            Bienvenue sur le super site toto !
+        </h1>
+        <div class="flex justify-center">
+            <a href="{{ path('app_login') }}" class="px-6 py-3 bg-red-600 text-white font-semibold rounded-lg hover:bg-red-700 transition duration-300">
+                Connexion
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock %}
